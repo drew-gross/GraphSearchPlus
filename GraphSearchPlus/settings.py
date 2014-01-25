@@ -26,6 +26,7 @@ TEMPLATE_DEBUG = True
 
 ALLOWED_HOSTS = []
 
+AUTH_USER_MODEL = 'django_facebook.FacebookCustomUser'
 
 # Application definition
 
@@ -37,6 +38,7 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'GraphSearchApp',
+    'django_facebook',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -81,3 +83,22 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.6/howto/static-files/
 
 STATIC_URL = '/static/'
+
+TEMPLATE_CONTEXT_PROCESSORS = ("django.contrib.auth.context_processors.auth",
+"django.core.context_processors.debug",
+"django.core.context_processors.i18n",
+"django.core.context_processors.media",
+"django.core.context_processors.static",
+"django.core.context_processors.tz",
+"django.contrib.messages.context_processors.messages",
+'django_facebook.context_processors.facebook',
+'django.core.context_processors.request',)
+
+AUTHENTICATION_BACKENDS = (
+    'django_facebook.auth_backends.FacebookBackend',
+    'django.contrib.auth.backends.ModelBackend',
+)
+
+FACEBOOK_APP_ID = 501994993250595
+
+FACEBOOK_APP_SECRET = '60f03d86fdfdcf17eb8a49a921de2781'
