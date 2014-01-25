@@ -2,61 +2,70 @@
 <head>
 
 	<!-- Latest compiled and minified CSS -->
-	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css">
-
-	<!-- Optional theme -->
-	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap-theme.min.css">
-
+	<link rel="stylesheet" href="{{ STATIC_URL }}/css/bootstrap.min.css">
 
 	<link href="{{ STATIC_URL }}css/facebook.css" type="text/css" rel="stylesheet" media="all" />
 	{% include 'django_facebook/_facebook_js.html' %}
 
-	<link href="{{ STATIC_URL }}nvr.css" type="text/css" rel="stylesheet" media="all" />
+	<link href="{{ STATIC_URL }}/css/nvr.css" type="text/css" rel="stylesheet" media="all" />
+	<link href="{{ STATIC_URL }}/css/login.css" type="text/css" rel="stylesheet" media="all" />
 	
 
 	<script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
-	<!-- Latest compiled and minified JavaScript -->
-	<script src="//netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+	<!-- Local compiled and minified JavaScript -->
+	<script src="{{ STATIC_URL }}/js/bootstrap.min.js"></script>
 
 </head>
 <body>
 
-<div class="nvr-header">
+<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+  <!-- Brand and toggle get grouped for better mobile display -->
+  <div class="navbar-header">
+    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+      <span class="sr-only">Toggle navigation</span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </button>
+    	<a class="navbar-brand" href="index.html"> <img src="{{ STATIC_URL }}/assets/LogoName53.png"> </a>
+  </div>
+
+  <!-- Collect the nav links, forms, and other content for toggling -->
+  <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+    <ul class="nav navbar-nav navbar-right">
+      <li><a href="#">TOP</a></li>
+      <li><a href="#">BENEFITS</a></li>
+      <li><a href="#">PRICING</a></li>
+      <li><a href="#">CONTACT US</a></li>
+    </ul>
+  </div><!-- /.navbar-collapse -->
+</nav>
+
+<section id="section-top" class="section-page">
 	<div class="container">
-		<div class="row">
-			<div class="col-md-3">
-				<h3> Logo Here </h3>
+		<div class="row"> 
+			<div class="col-md-6">
+				<h2> What happens in the past <br> should stay in the past. </h2>
+				<p> You know that wicked party you went to in grade 11 and all the photos that were on Facebook? Probably not, but chances are they're still there. We help you find these incriminating photos and remove them. </p>
 			</div>
 			<div class="col-md-6">
-				<h3> Links and Stuff </h3>
+				<img class="img-responsive hidden-xs" src="{{ STATIC_URL }}/assets/iMac690.png">
 			</div>
 		</div>
 	</div>
-</div>
+</section>
 
-<div class="container">
-
-	<div class="row"> 
-		<div class="col-md-5">
-			<h1> Text Here </h1>
-		</div>
-		<div class="col-md-4">
-			<h2> Image Here </h2>
-		</div>
-
-	</div>
-	<div class="row">
-		<div class="col-md-9">
+<section id="section-connect" class="section-page">
+	<div class="container">
+		<div class="col-md-12">
 			<form action="{% url 'facebook_connect' %}?facebook_login=1" method="post">
 			    <input type="hidden" value="{{ request.path }}" name="next" />
 			    {% csrf_token %}
-			    <input onclick="F.connect(this.parentNode); return false;" type="image" src="{{ STATIC_URL }}django_facebook/images/facebook_login.png" />
+			    <input class="btn btn-primary btn-lg facebook" onclick="F.connect(this.parentNode); return false;" type="button" value="Flag Incriminating Photos" />
 			</form>
-
 		</div>
-
 	</div>
-</div>
+</section>
 
 </body>
 </html>
