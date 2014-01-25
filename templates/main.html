@@ -1,7 +1,59 @@
 <html>
 <head>
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="{{ STATIC_URL }}/css/bootstrap.min.css">
+
+	<link href="{{ STATIC_URL }}css/facebook.css" type="text/css" rel="stylesheet" media="all" />
+	{% include 'django_facebook/_facebook_js.html' %}
+
+	<link href="{{ STATIC_URL }}/css/nvr.css" type="text/css" rel="stylesheet" media="all" />
+	<link href="{{ STATIC_URL }}/css/main.css" type="text/css" rel="stylesheet" media="all" />
+	
+
+	<script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+	<!-- Local compiled and minified JavaScript -->
+	<script src="{{ STATIC_URL }}/js/bootstrap.min.js"></script>
+
 </head>
 <body>
+
+<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+  <!-- Brand and toggle get grouped for better mobile display -->
+  <div class="navbar-header">
+    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+      <span class="sr-only">Toggle navigation</span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </button>
+    	<a class="navbar-brand" href="index.html"> <img src="{{ STATIC_URL }}/assets/LogoName53.png"> </a>
+  </div>
+
+  <!-- Collect the nav links, forms, and other content for toggling -->
+  <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+    <ul class="nav navbar-nav navbar-right">
+      <li><a href="#">RESULTS</a></li>
+      <li><a href="#">ACCOUNT</a></li>
+      <li><a href="#">CONTACT US</a></li>
+    </ul>
+  </div><!-- /.navbar-collapse -->
+</nav>
+
+<div class="container">
+	<div class="column"> 
+		<div class="col-md-2">
+			<h3>Show Me:</h3>
+		</div>
+		<div class="col-md-10">
+			<input onclick="" type="image" src="https://fbcdn-sphotos-f-a.akamaihd.net/hphotos-ak-prn1/74177_1565499830168_2397906_n.jpg" />
+			<input onclick="" type="image" src="https://scontent-a.xx.fbcdn.net/hphotos-prn1/t1/76197_1565499670164_5552511_n.jpg" />
+			<input onclick="" type="image" src="https://scontent-b.xx.fbcdn.net/hphotos-prn1/t1/72788_1565499230153_3145637_n.jpg" />
+			<input onclick="" type="image" src="https://fbcdn-sphotos-b-a.akamaihd.net/hphotos-ak-frc3/s720x720/300561_2298316590129_1804483813_n.jpg" />
+			<input onclick="" type="image" src="https://scontent-a.xx.fbcdn.net/hphotos-ash3/q77/s720x720/1476179_10202118573438590_1258615032_n.jpg" />
+			<input onclick="" type="image" src="https://fbcdn-sphotos-c-a.akamaihd.net/hphotos-ak-prn1/t1/149527_10150317879985565_6938322_n.jpg" />
+		</div>
+	</div>
+</div>
 
 <p> {{user.first_name}} </p>
 
