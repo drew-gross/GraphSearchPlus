@@ -1,0 +1,35 @@
+.reject, .accept{
+	padding: 0;
+	border-radius: 0px;
+	-moz-border-radius: 0px;
+}
+
+.reject:hover{
+	background-color: #b94a48;
+}
+
+.accept{
+	width:50px;
+	height:auto;
+}
+
+.accept:hover{
+	background-color: #dff0d8;
+}
+
+.photo{
+	max-width: 100%;
+}
+
+.photo:hover{
+	opacity: 0.5;
+}
+
+.btn-50{
+	min-width: 49.5%;
+	margin-top: 10px;
+}
+
+.center{
+	align:center
+}
