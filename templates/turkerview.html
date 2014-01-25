@@ -1,0 +1,20 @@
+<html>
+ <head>
+ 	<title>Thanks!</title>
+  <meta http-equiv='Content-Type' content='text/html; charset=UTF-8'/>
+  <script type='text/javascript' src='https://s3.amazonaws.com/mturk-public/externalHIT_v1.js'></script>
+ </head>
+ <body>
+  <form name='mturk_form' method='post' id='mturk_form' action='https://www.mturk.com/mturk/externalSubmit'>
+	  <input type='hidden' value='' name='assignmentId' id='assignmentId'/>
+	  <img src="{{ img_src }}" />
+	  <h1>Does this picture contain a person {{ description }}?</h1>
+	  <p>
+	  	<input type="radio" name="scandalous" value="yes"><label for="yes">Yes</label>
+	  	<input type="radio" name="scandalous" value="no"><label for="no">No</label>
+	  	<input type='submit' id='submitButton' value='Submit' />
+	  </p>
+	</form>
+  <script language='Javascript'>turkSetAssignmentID();</script>
+ </body>
+</html>

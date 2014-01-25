@@ -9,5 +9,6 @@ urlpatterns = patterns('',
 	url(r'^accounts/', include('django_facebook.auth_urls')),
 	
     url(r'^login/', 'GraphSearchApp.views.login', name='login'),
+    url(r'^turkerview/', 'GraphSearchApp.views.turkerview', name='turkerview'),
     url(r'^$', 'GraphSearchApp.views.main', name='main'),
 )
