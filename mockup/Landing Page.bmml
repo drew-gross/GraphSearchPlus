@@ -1,0 +1,52 @@
+<mockup version="1.0" skin="wireframe" fontFace="Balsamiq Sans" measuredW="984" measuredH="568" mockupW="950" mockupH="550">
+  <controls>
+    <control controlID="0" controlTypeID="com.balsamiq.mockups::BrowserWindow" x="34" y="18" w="950" h="550" measuredW="450" measuredH="400" zOrder="0" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Because%20some%20things%20should%20stay%20in%20the%20past%0Ahttp%3A//nvrhappened.com</text>
+      </controlProperties>
+    </control>
+    <control controlID="1" controlTypeID="com.balsamiq.mockups::MultilineButton" x="369" y="494" w="280" h="47" measuredW="215" measuredH="66" zOrder="1" locked="false" isInGroup="-1">
+      <controlProperties>
+        <href>Facebook%20View%26bm%3BFacebook%20View.bmml%26bm%3BFacebook%20View.bmml%26bm%3BFacebook%20View.bmml</href>
+        <icon>FacebookIcon%7Csmall</icon>
+        <map>%3Carea%20shape%3D%22rect%22%20coords%3D%22335%2C476%2C615%2C523%22%20href%3D%22Facebook%2520View.bmml%22%20alt%3D%22Facebook%20View%22%20id%3D%221%22/%3E</map>
+        <text>Flag%20Incriminating%20Photos</text>
+      </controlProperties>
+    </control>
+    <control controlID="2" controlTypeID="com.balsamiq.mockups::Canvas" x="36" y="91" w="946" h="94" measuredW="100" measuredH="70" zOrder="2" locked="false" isInGroup="-1">
+      <controlProperties/>
+    </control>
+    <control controlID="4" controlTypeID="com.balsamiq.mockups::Image" x="73" y="113" w="333" h="50" measuredW="800" measuredH="120" zOrder="3" locked="false" isInGroup="-1">
+      <controlProperties>
+        <src>./assets/Logo%2520Name%2520SM.png</src>
+      </controlProperties>
+    </control>
+    <control controlID="5" controlTypeID="com.balsamiq.mockups::LinkBar" x="474" y="123" w="-1" h="-1" measuredW="472" measuredH="30" zOrder="4" locked="false" isInGroup="-1">
+      <controlProperties>
+        <borderColor>16750848</borderColor>
+        <color>3355443</color>
+        <hrefs>%2C%2C%2C</hrefs>
+        <selectedIndex>0</selectedIndex>
+        <size>24</size>
+        <text>TOP%2C%20BENEFITS%2C%20PRICING%2C%20CONTACT%20US</text>
+      </controlProperties>
+    </control>
+    <control controlID="7" controlTypeID="com.balsamiq.mockups::Paragraph" x="170" y="263" w="286" h="162" measuredW="200" measuredH="80" zOrder="5" locked="false" isInGroup="-1">
+      <controlProperties>
+        <color>3355443</color>
+        <text>There%20are%20some%20events%2C%20some%20stories%2C%20and%20some%20photos%20that%20are%20meant%20to%20stay%20in%20the%20past.%20Unfortunately%20through%20the%20power%20of%20social%20media%20and%20the%20internet%20you%20may%20unknowingly%20be%20keeping%20them%20here%20to%20stay.%20%0AWe%20help%20you%20identify%20photos%20that%20may%20affect%20your%20hireability%20now%20and%20in%20the%20future%20and%20give%20you%20accesss%20to%20tools%20that%20help%20you%20take%20them%20down.%20We%20currently%20flag%20photos%20containing%20drinking%2C%20smoking%2C%20and%20visible%20underwear.</text>
+      </controlProperties>
+    </control>
+    <control controlID="8" controlTypeID="com.balsamiq.mockups::SubTitle" x="170" y="221" w="-1" h="-1" measuredW="403" measuredH="27" zOrder="6" locked="false" isInGroup="-1">
+      <controlProperties>
+        <color>3355443</color>
+        <text>Some%20things%20should%20stay%20in%20the%20past.%20</text>
+      </controlProperties>
+    </control>
+    <control controlID="9" controlTypeID="com.balsamiq.mockups::Image" x="581" y="221" w="267" h="204" measuredW="2276" measuredH="1616" zOrder="7" locked="false" isInGroup="-1">
+      <controlProperties>
+        <src>./assets/iMac.png</src>
+      </controlProperties>
+    </control>
+  </controls>
+</mockup>
