@@ -42,6 +42,7 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
     'GraphSearchApp',
     'django_facebook',
+    'django_cron',
 )
 
 MIDDLEWARE_CLASSES = (
