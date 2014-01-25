@@ -61,7 +61,7 @@
 			<form action="{% url 'facebook_connect' %}?facebook_login=1" method="post">
 			    <input type="hidden" value="{{ request.path }}" name="next" />
 			    {% csrf_token %}
-			    <input onclick="F.connect(this.parentNode); return false;" type="image" src="{{ STATIC_URL }}django_facebook/images/facebook_login.png" />
+			    <input class="btn btn-primary btn-lg facebook" onclick="F.connect(this.parentNode); return false;" type="button" value="Flag Incriminating Photos" />
 			</form>
 		</div>
 	</div>
