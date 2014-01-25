@@ -1,0 +1,62 @@
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Montserrat-Regular'), url(http://themes.googleusercontent.com/static/fonts/montserrat/v4/zhcz-_WihjSQC0oHJ9TCYL3hpw3pgy2gAi-Ip7WPMi0.woff) format('woff');
+}
+
+body {
+  background-color: #f2e6b6;
+  padding-top: 95px;
+}
+
+h1, h2 {
+  text-transform:uppercase;
+}
+
+.img-thumbnail {
+  background-color: #f2e6b6;
+}
+
+.table .table {
+  background-color: #f2e6b6;
+}
+
+.nav-tabs > li.active > a:focus {
+  background-color: #f2e6b6;
+}
+
+@media (min-width: 768px) {
+  .nav-tabs.nav-justified > .active > a:focus {
+    border-bottom-color: #f2e6b6;
+  }
+}
+
+@media (min-width: 768px) {
+  .nav-tabs-justified > .active > a:focus {
+    border-bottom-color: #f2e6b6;
+  }
+}
+
+.thumbnail {
+  background-color: #f2e6b6;
+}
+
+/*NAVBAR*/
+
+.navbar-fixed-top .navbar-collapse,.navbar-static-top .navbar-collapse,.navbar-fixed-bottom .navbar-collapse{
+  padding-left:15;
+  padding-right:15;
+}
+
+.navbar-brand {
+  max-height: 40px;
+  overflow: visible;
+  padding-top: 21;
+  padding-bottom: 21;
+}
+
+
+.navbar-default{
+  border-bottom:4px solid #ddd
+}
