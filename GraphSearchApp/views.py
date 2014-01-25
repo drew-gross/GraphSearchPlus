@@ -28,17 +28,19 @@ def make_hit(url, query):
 	return conn.create_hit(question=question, title="Determine if an employer would disqualify a candidate based on an image", reward=0.01)
 
 def login(request):
-	if request.user.is_authenticated():
-		redirect("/")
 	return render(request,'login.html')
 
 def main(request):
 	if not request.user.is_authenticated():
-		redirect("/login/")
+		return redirect("/login/")
+
+	fb = request.user.get_offline_graph()
+	photos = fb.get('me/photos')
+	for photo in photos['data']:
+		make_hit(photo['source'], "who is dumb")
 
 	return render(request,'main.html')
 
 def turkerview(request):
-	#make_hit('https://fbcdn-sphotos-a-a.akamaihd.net/hphotos-ak-prn1/t1/1016702_10200553764261376_1292186779_n.jpg', "who is dumb")
 	process_hits();
 	return HttpResponse("thanks!")
