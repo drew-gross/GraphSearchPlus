@@ -1,0 +1,62 @@
+<html>
+<head>
+
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap.min.css">
+
+	<!-- Optional theme -->
+	<link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.3/css/bootstrap-theme.min.css">
+
+
+	<link href="{{ STATIC_URL }}css/facebook.css" type="text/css" rel="stylesheet" media="all" />
+	{% include 'django_facebook/_facebook_js.html' %}
+
+	<link href="{{ STATIC_URL }}nvr.css" type="text/css" rel="stylesheet" media="all" />
+	
+
+	<script src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="//netdna.bootstrapcdn.com/bootstrap/3.0.3/js/bootstrap.min.js"></script>
+
+</head>
+<body>
+
+<div class="nvr-header">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-3">
+				<h3> Logo Here </h3>
+			</div>
+			<div class="col-md-6">
+				<h3> Links and Stuff </h3>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="container">
+
+	<div class="row"> 
+		<div class="col-md-5">
+			<h1> Text Here </h1>
+		</div>
+		<div class="col-md-4">
+			<h2> Image Here </h2>
+		</div>
+
+	</div>
+	<div class="row">
+		<div class="col-md-9">
+			<form action="{% url 'facebook_connect' %}?facebook_login=1" method="post">
+			    <input type="hidden" value="{{ request.path }}" name="next" />
+			    {% csrf_token %}
+			    <input onclick="F.connect(this.parentNode); return false;" type="image" src="{{ STATIC_URL }}django_facebook/images/facebook_login.png" />
+			</form>
+
+		</div>
+
+	</div>
+</div>
+
+</body>
+</html>
