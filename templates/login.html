@@ -58,7 +58,7 @@
 	<div class="container">
 		<div class="col-md-12">
 			<form action="{% url 'facebook_connect' %}?facebook_login=1" method="post">
-			    <input type="hidden" value="{{ request.path }}" name="next" />
+			    <input type="hidden" value="/" name="next" />
 			    {% csrf_token %}
 			    <input class="btn btn-primary btn-lg facebook" onclick="F.connect(this.parentNode); return false;" type="button" value="Flag Incriminating Photos" />
 			</form>
