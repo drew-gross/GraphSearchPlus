@@ -55,7 +55,7 @@ def main(request):
 
 
 	context = {'display_results' : display_results,
-				'photos' : display_results}
+				'photos' : results}
 
 
 

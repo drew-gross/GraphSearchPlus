@@ -14,6 +14,26 @@
 	<!-- Local compiled and minified JavaScript -->
 	<script src="{{ STATIC_URL }}js/bootstrap.min.js"></script>
 
+	<script type="text/javascript">
+
+	function remove(name) {
+    	$.post("{{user.userprofile.id}}/remove/"+name,"remove")
+	}
+
+	$( document ).ready(function() 
+		{{% for p in photos %}
+			$("#r-{{ p.id }}").click(function(){
+	    		remove("{{p.id}}");
+	    		$("#r-{{ p.id }}").parent().hide()
+			});
+			$("#a-{{ p.id }}").click(function(){
+	    		$("#a-{{ p.id }}").parent().hide()
+			});
+		{% endfor %}
+	});
+
+	</script>
+
 </head>
 <body>
 
@@ -72,20 +92,15 @@
 			<h3>Show Me:</h3>
 		</div>
 		<div class="col-md-8">
+		{% for p in photos %}
 			<div class="well">
 				<button class="btn reject" onclick="" type="button"  name="mysubmitbutton" id="mysubmitbutton"> 
-					<img class="photo" style="width:auto;" src="https://fbcdn-sphotos-f-a.akamaihd.net/hphotos-ak-prn1/74177_1565499830168_2397906_n.jpg">
+					<img class="photo" style="width:auto;" src="{{p.src}}">
 				</button> 
-				<button type="button" class="btn btn-success btn-lg btn-50" onclick="" >Keep Photo</button>
-				<button type="button" class="btn btn-danger btn-lg btn-50" onclick="" >Delete Photo</button>
+				<button id="a-{{p.id}}" type="button" class="btn btn-success btn-lg btn-50" onclick="" >Keep Photo</button>
+				<button id="r-{{p.id}}" type="button" class="btn btn-danger btn-lg btn-50" onclick="" >Delete Photo</button>
 			</div>
-			<div class="well">
-				<button class="btn reject" onclick="" type="button"  name="mysubmitbutton" id="mysubmitbutton"> 
-					<img class="photo" style="width:auto;" src="https://scontent-a.xx.fbcdn.net/hphotos-ash3/q77/s720x720/1476179_10202118573438590_1258615032_n.jpg">
-				</button> 
-				<button type="button" class="btn btn-success btn-lg btn-50" onclick="" >Keep Photo</button>
-				<button type="button" class="btn btn-danger btn-lg btn-50" onclick="" >Delete Photo</button>
-			</div>
+		{% endfor %}
 		</div>
 	</div>
 </div>
