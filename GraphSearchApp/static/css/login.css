@@ -1,0 +1,76 @@
+/*PAGES*/
+.section-page{
+  padding:55px 0
+}
+.section-page .head-section{
+  text-align:center;margin-bottom:25px
+}
+.section-page .head-section h2,.section-page .head-section h1{
+  text-transform:uppercase;
+  margin-top:0!important;
+  position:relative;
+  display:inline-block;
+  margin-bottom:20px
+}
+.section-page .head-section h2:after,.section-page .head-section h1:after{
+  content:"";
+  display:inline-block;
+  background:rgba(0,0,0,0.3);
+  position:absolute;
+  bottom:-5px;
+  left:25%;
+  height:2px;
+  width:50%;
+  opacity:.5
+}
+.section-page .head-section h1:after{
+  bottom:0
+}
+.section-page .head-section p{
+  margin-bottom:
+  40px;width:75%;
+  margin:auto
+}
+
+#section-top{
+  max-height:484px;
+  background:#5B7876;
+  color:#fff;
+  text-align:center;
+  overflow:hidden;
+  padding:45px
+}
+@media (min-width: 992px) {
+  #section-top{
+    text-align:left;
+  }
+}
+
+#section-top h1,#section-connect h2{
+  margin-top:0
+}
+#section-top p{
+  margin-bottom:0
+}
+
+#section-connect{
+  background:#F2E6B6;
+  color:#fff;
+  text-align:center;
+  padding:45px 0
+}
+#section-connect h1,#section-connect h2{
+  margin-top:0
+}
+#section-connect p{
+  margin-bottom:0
+}
+
+/*Facebook Button*/
+.facebook {
+	background:#3b5998;
+}
+
+.facebook:hover {
+	background:#2f4679;
+}
