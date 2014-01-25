@@ -104,3 +104,5 @@ AUTHENTICATION_BACKENDS = (
 FACEBOOK_APP_ID = 501994993250595
 
 FACEBOOK_APP_SECRET = '60f03d86fdfdcf17eb8a49a921de2781'
+
+FACEBOOK_DEFAULT_SCOPE = ['email', 'user_about_me', 'user_birthday', 'user_videos','user_friends','user_photos','user_activities','user_photo_video_tags']

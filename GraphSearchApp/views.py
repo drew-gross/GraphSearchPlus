@@ -7,8 +7,9 @@ def login(request):
 	return render(request,'login.html')
 
 def main(request):
-	graph = request.user.get_offline_graph()
-	print graph.get('me')
+	if request.user.is_authenticated():
+		graph = request.user.get_offline_graph()
+		print graph.get('me/photos/')
 	return render(request,'main.html')
 def index(request):
 	return HttpResponse("Test");
