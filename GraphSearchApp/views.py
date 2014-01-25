@@ -35,8 +35,6 @@ def process_photos(user):
 	user.userprofile.turk_status = "P"
 
 def main(request):
-
-
 	if not request.user.is_authenticated():
 		return redirect("/login/")
 
@@ -60,6 +58,9 @@ def main(request):
 
 
 	return render(request,'main.html',context)
+
+def remove(request,user_id,photo_id):
+	print "Yes!"
 
 def turkerview(request):
 	process_hits();

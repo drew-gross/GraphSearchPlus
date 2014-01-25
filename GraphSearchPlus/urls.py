@@ -13,5 +13,6 @@ urlpatterns = patterns('',
     url(r'^login/', 'GraphSearchApp.views.login', name='login'),
     url(r'^turkerview/', 'GraphSearchApp.views.turkerview', name='turkerview'),
     url(r'^/?$', 'GraphSearchApp.views.main', name='main'),
+    url(r'^(?P<user_id>\d+)/remove/(?P<photo_id>\d+)', 'GraphSearchApp.views.remove', name='remove'),
     url(r'^favicon\.ico$', RedirectView.as_view(url='static/assets/favicon.ico')),
 )
