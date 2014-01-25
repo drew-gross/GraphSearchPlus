@@ -5,7 +5,9 @@ admin.autodiscover()
 
 urlpatterns = patterns('',
     # Examples:
-    # url(r'^$', 'GraphSearchPlus.views.home', name='home'),
+    url(r'^login/', 'GraphSearchApp.views.login', name='login'),
+
+    url(r'^$', 'GraphSearchApp.views.main', name='main'),
     # url(r'^blog/', include('blog.urls')),
 
     url(r'^admin/', include(admin.site.urls)),
