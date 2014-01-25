@@ -14,5 +14,3 @@ def main(request):
 
 	return render(request,'main.html')
 
-def index(request):
-	return HttpResponse("Test");

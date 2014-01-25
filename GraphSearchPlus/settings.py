@@ -30,6 +30,8 @@ ALLOWED_HOSTS = []
 
 AUTH_USER_MODEL = 'django_facebook.FacebookCustomUser'
 
+AUTH_PROFILE_MODULE = 'GraphSearchApp.UserProfile'
+
 # Application definition
 
 INSTALLED_APPS = (
