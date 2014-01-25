@@ -39,32 +39,43 @@
     </ul>
   </div><!-- /.navbar-collapse -->
 </nav>
-
-<section id="section-top" class="section-page">
-	<div class="container">
-		<div class="row"> 
-			<div class="col-md-6">
-				<h2> What happens in the past <br> should stay in the past. </h2>
-				<p> You know that wicked party you went to in grade 11 and all the photos that were on Facebook? Probably not, but chances are they're still there. We help you find these incriminating photos and remove them. </p>
-			</div>
-			<div class="col-md-6">
-				<img class="img-responsive hidden-xs" src="{{ STATIC_URL }}assets/iMac690.png">
+<div id="wrap">
+	<section id="section-top" class="section-page">
+		<div class="container">
+			<div class="row"> 
+				<div class="col-md-6">
+					<h2> What happens in the past <br> should stay in the past. </h2>
+					<p> You know that wicked party you went to in grade 11 and all the photos that were on Facebook? Probably not, but chances are they're still there. We help you find these incriminating photos and remove them. </p>
+				</div>
+				<div class="col-md-6">
+					<img class="img-responsive hidden-xs" src="{{ STATIC_URL }}assets/iMac690.png">
+				</div>
 			</div>
 		</div>
-	</div>
-</section>
+	</section>
 
-<section id="section-connect" class="section-page">
-	<div class="container">
-		<div class="col-md-12">
-			<form action="{% url 'facebook_connect' %}?facebook_login=1" method="post">
-			    <input type="hidden" value="/" name="next" />
-			    {% csrf_token %}
-			    <input class="btn btn-primary btn-lg facebook" onclick="F.connect(this.parentNode); return false;" type="button" value="Flag Incriminating Photos" />
-			</form>
+	<section id="section-connect" class="section-page">
+		<div class="container">
+			<div class="col-md-12">
+				<form action="{% url 'facebook_connect' %}?facebook_login=1" method="post" style="margin-bottom: 0px">
+				    <input type="hidden" value="/" name="next" />
+				    {% csrf_token %}
+				    <input class="btn btn-primary btn-lg facebook" onclick="F.connect(this.parentNode); return false;" type="button" value="Flag Incriminating Photos" />
+				</form>
+			</div>
 		</div>
-	</div>
-</section>
+	</section>
+	<section id="section-benefits" class="section-page">
+		<div class="container">
+			<div class="row"> 
+				<div class="col-md-12">
+					<h2> Over ninty percent of employeers use social media to screen applicants.</h2>
+					<p> Sixty nine percent of employeers have rejected an application based upon what they discovered on someone's social media profiles. </p>
+				</div>
+			</div>
+		</div>
+	</section>
+</div>
 
 </body>
 </html>
