@@ -30,28 +30,36 @@ def process_photos(user):
 		print photo['from']['id']
 		if photo['from']['id'] == user.facebook_id:
 			photo_db.user_uploaded = True
+		photo_db.save()
 
 	user.userprofile.turk_status = "P"
 
 def main(request):
+
+
 	if not request.user.is_authenticated():
 		return redirect("/login/")
 
 	if not hasattr(request.user,'userprofile'):
 		profile = UserProfile(user=request.user)
+		profile.save()
 
+	display_results = False
+	results = []
 
 	if request.user.userprofile.turk_status == "N":
 		process_photos(request.user)
-	elif request.user.userprofile.turk_status == "P":
-		pass
-	else:
-		pass
+	elif request.user.userprofile.turk_status == "C":
+		display_results = True
+		results = request.user.userprofile.photo_set.all()
+
+
+	context = {'display_results' : display_results,
+				'photos' : display_results}
 
 
 
-
-	return render(request,'main.html')
+	return render(request,'main.html',context)
 
 def turkerview(request):
 	process_hits();
